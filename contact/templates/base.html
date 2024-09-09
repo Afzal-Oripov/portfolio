@@ -1,0 +1,805 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Создание сайтов и мобильных приложений. Решение проблем c компьютерами, операционными системами Windows и Linux, а также заправка картриджей" />
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!--=============== REMIXICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- Animation link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <!-- Wow JS -->
+    <script src="{% static "js/wow.min.js" %}"></script>
+    <script src="{% static "js/wow.min.js" %}"></script>
+              <script>
+              new WOW().init();
+              </script>
+
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+        
+        <!-- Yandex.Metrika counter -->
+        <!-- <script type="text/javascript">
+            (function (m, e, t, r, i, k, a) {
+                m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+                m[i].l = 1 * new Date();
+                for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
+                k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+            })
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+            
+            ym(92117594, "init", {
+                clickmap: true,
+                trackLinks: true,
+                accurateTrackBounce: true
+            });
+            
+        </script> -->
+        <noscript>
+            <div><img src=" 'images/https://mc.yandex.ru/watch/92117594" style="position:absolute; left:-9999px;" alt="" />
+            </div>
+        </noscript>
+        <!-- /Yandex.Metrika counter -->
+        
+        <title>Af-Dev</title>
+    </head>
+    
+<body class="light-theme">
+
+    <!-- ==================== Preloader ==================== -->
+    <div id="preloader" class="preloader">
+        <div class="loading loading02">
+            <span>A</span>
+            <span>F</span>
+            <span>-</span>
+            <span>D</span>
+            <span>E</span>
+            <span>V</span>
+        </div>
+    </div>
+
+    <!--==================== Шапка сайта ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                AF-Dev
+            </a>
+            <p>{% trans 'Template title '%}</p>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list grid">
+
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">
+                            <i class="ri-home-5-line"></i>Домой
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#skills" class="nav__link">
+                            <i class="ri-trophy-line"></i>Навыки
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#qualification" class="nav__link">
+                            <i class="ri-book-open-line"></i>Квалиф.
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#services" class="nav__link">
+                            <i class="ri-briefcase-line"></i>Услуги
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#projects" class="nav__link">
+                            <i class="ri-image-line"></i>Проекты
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">
+                            <i class="ri-chat-3-line"></i>Контакты
+                        </a>
+                    </li>
+
+                </ul>
+                <!-- Close button -->
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+
+            <!-- Языки -->
+            <div class="language__menu" id="language-menu">
+                <ul class="language__list grid">
+
+                    <li class="language__item">
+                        <a href="/" class="language__link">
+                            <img src="{% static 'images/ru.png' %}" alt="">
+                            <p>Русский</p>
+                        </a>
+                    </li>
+
+                    <li class="language__item">
+                        <a href="/en" class="language__link">
+                            <img src="{% static 'images/en.png' %}" alt="">
+                            <p>English</p>
+                        </a>
+                    </li>
+
+                    <li class="language__item">
+                        <a href="/uz" class="language__link">
+                            <img src="{% static 'images/uz.png' %}" alt="">
+                            <p>O`zbekcha</p>
+                        </a>
+                    </li>
+                </ul>
+                <!-- Close button -->
+                <div class="language__close" id="language-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+
+            <div class="nav__buttons">
+                <!-- Иконка для изменения темы и языка -->
+                <div class="language__toggle" id="language-toggle">
+                    <i class="ri-global-line change-language"></i>
+                </div>
+
+                <i class="ri-moon-line change-theme" id="theme-button"></i>
+                <!-- Меню toggle для мобильников -->
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-4-line"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--==================== Главная ====================-->
+    <main class="main">
+        <!--==================== Домашняя ====================-->
+        <section class="home section" id="home">
+            <div class="home__container container grid section__border">
+                <div class="home__data grid">
+                    <h1 class="home__title ">
+
+
+
+                        Привет, это Afzal<br>
+                        Full-Stack Разработчик<br>
+                        Из Ташкента<br>
+
+                    </h1>
+
+                    <div class="home__blob grid">
+
+                        <div data-wow-delay="1s" class="home__perfil wow animate__animated animate__bounceInDown">
+                            <img src="{% static 'images/main.jpg' %}" alt="empty">
+                        </div>
+
+                        <img src="{% static 'images/shape-wawes.svg' %}" alt="" class="home__shape-wawes">
+                        <img src="{% static 'images/shape-circle.svg' %}" alt="" class="home__shape-circle">
+                    </div>
+
+                    <ul class="home__social">
+
+                        <a href="https://t.me/A_Oripov09" target="_blank" class="home__social-link">
+                            <i class="ri-telegram-line"></i>
+                        </a>
+
+                        <a href="https://github.com/Afzal-Oripov" target="_blank" class="home__social-link">
+                            <i class="ri-github-line"></i>
+                        </a>
+
+                        <a href="https://www.instagram.com/afzal_775/" target="_blank" class="home__social-link">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+
+                    </ul>
+                </div>
+
+                <!--==================== Домашняя информация 1 ====================-->
+                <div data-wow-delay="1s" class="home__info wow animate__animated animate__backInUp">
+
+                    <div>
+                        <h3 class="home__info-title">
+                            О СЕБЕ
+                        </h3>
+
+                        <p class="home__info-description">
+
+                            Привет, меня зовут Afzal. Я Full-Stack Разработчик.
+                            Я разрабатываю сайты, мобильные приложений.
+                            Также устраняю проблемы с ПК, Windows и Linux.
+
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="home__info-title">
+                            КОНТАКТЫ
+                        </h3>
+
+                        <p class="home__info-description">
+                            Tashkent, Uzbekistan <br>
+                            afzaloripov007@gmail.com <br>
+                            +998 (33) 081-02-82 <br>
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="home__info-title">
+                            УСЛУГИ
+                        </h3>
+
+                        <p class="home__info-description">
+
+                            Разработка Web-сайтов <br>
+                            Создание приложений <br>
+                            Сис. администрирование <br>
+
+                        </p>
+                    </div>
+
+
+
+                </div>
+                <!--==================== Домашняя информация 2 ====================-->
+                <div data-wow-delay="1s" class="home__info wow animate__animated animate__backInUp">
+                    <div>
+                        <h3 class="home__info-title">
+                            ГОДЫ ОПЫТА
+                        </h3>
+
+                        <p class="home__info-number">
+                            04+
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="home__info-title">
+                            ЗАВЕРШЕННЫЕ ПРОЕКТЫ
+                        </h3>
+
+                        <p class="home__info-number">
+                            4+
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="home__info-title">
+                            РАБОТА В КОМПАНИЯХ
+                        </h3>
+
+                        <p class="home__info-number">
+                            03+
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+        <!--==================== Мои скилы ====================-->
+        <section class="skills section" id="skills">
+            <h2 class="section__title">Навыки</h2>
+            <span class="section__subtitle">Мои лучшие навыки</span>
+
+            <div class="skills__container container grid section__border">
+                <!--==================== Мои скилы 1 ====================-->
+                <div class="skills__content">
+                    <h3 class="skills__title">
+                        <i class="ri-braces-line"></i> Full-Stack Developer
+                    </h3>
+
+                    <div data-wow-delay="0.3s" data-wow-duration="2s" class="skills__info wow animate__animated animate__slideInLeft">
+
+                        <div class="skills__data">
+                            <div class="skills__blob">
+                                <img src="{% static 'images/html-1.svg' %}" alt="not">
+                            </div>
+
+                            <h3 class="skills__name">HTML</h3>
+                            <span class="skills__subtitle">Профи</span>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__blob">
+                                <img src="{% static 'images/css-3.svg' %}" alt="not">
+                            </div>
+
+                            <h3 class="skills__name">CSS</h3>
+                            <span class="skills__subtitle">Профи</span>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__blob">
+                                <img src="{% static 'images/logo-javascript.svg' %}" alt="not">
+                            </div>
+
+                            <h3 class="skills__name">JavaScript</h3>
+                            <span class="skills__subtitle">Средний</span>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__blob">
+                                <img src="{% static 'images/react.svg' %}" alt="not">
+                            </div>
+
+                            <h3 class="skills__name">React</h3>
+                            <span class="skills__subtitle">Базовый</span>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__blob">
+                                <img src="{% static 'images/git.svg' %}" alt="not">
+                            </div>
+
+                            <h3 class="skills__name">Git</h3>
+                            <span class="skills__subtitle">Средний</span>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__blob">
+                                <img src="{% static 'images/django.svg' %}" alt="not">
+                            </div>
+
+                            <h3 class="skills__name">Django</h3>
+                            <span class="skills__subtitle">Средний</span>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!--==================== Мои скилы 2 ====================-->
+                <div class="skills__content">
+                    <h3 class="skills__title">
+                        <i class="ri-computer-line"></i> IT Engineer
+                    </h3>
+
+                    <div data-wow-delay="0.3s"data-wow-duration="2s" class="skills__info wow animate__animated animate__slideInRight">
+                        <div class="skills__data">
+                            <div class="skills__blob">
+                                <img src="{% static 'images/monitor.svg' %}" alt="">
+                            </div>
+
+                            <h3 class="skills__name">Computers</h3>
+                            <span class="skills__subtitle">Средний</span>
+                        </div>
+
+
+
+                        <div class="skills__data">
+                            <div class="skills__blob">
+                                <img src="{% static 'images/windows.svg' %}" alt="">
+                            </div>
+
+                            <h3 class="skills__name">Windows</h3>
+                            <span class="skills__subtitle">Профи</span>
+                        </div>
+
+
+
+                        <div class="skills__data">
+                            <div class="skills__blob">
+                                <img src="{% static 'images/linux.svg' %}" alt="">
+                            </div>
+
+                            <h3 class="skills__name">Linux</h3>
+                            <span class="skills__subtitle">Базовый</span>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__blob">
+                                <img src="{% static 'images/wifi.svg' %}" alt="">
+                            </div>
+
+                            <h3 class="skills__name">Networks</h3>
+                            <span class="skills__subtitle">Средний</span>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__blob">
+                                <img src="{% static 'images/printer.svg' %}" alt="">
+                            </div>
+
+                            <h3 class="skills__name">Printers</h3>
+                            <span class="skills__subtitle">Базовый</span>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!--==================== Квалификация ====================-->
+        <section class="qualification section" id="qualification">
+            <h2 class="section__title">Квалификация</h2>
+            <span class="section__subtitle">Опыт и образование</span>
+
+            <div class="qualification__container container grid section__border">
+                <!--==================== Квалификация 1 ====================-->
+                <div class="qualification__content">
+                    <h3 class="qualification__title">
+                        <i class="ri-code-s-slash-fill"></i>Образование
+                    </h3>
+
+                    <div data-wow-duration="2s" class="qualification__info wow animate__animated animate__fadeInDown">
+
+                        <div>
+                            <h3 class="qualification__name">
+                                HTML & CSS
+                            </h3>
+                            <span class="qualification__country">Kings Academy</span>
+                            <span class="qualification__year">2021 - 2022</span>
+                        </div>
+
+                        <div>
+                            <h3 class="qualification__name">
+                                Front-End
+                            </h3>
+                            <span class="qualification__country">IT Park</span>
+                            <span class="qualification__year">2022 - 2023</span>
+                        </div>
+
+                        <div>
+                            <h3 class="qualification__name">
+                                Back-End
+                            </h3>
+                            <span class="qualification__country">IT Park</span>
+                            <span class="qualification__year">2023 - 2024</span>
+                        </div>
+
+                    </div>
+                </div>
+                <!--==================== Квалификация 2 ====================-->
+                <div class="qualification__content">
+                    <h3 class="qualification__title">
+                        <i class="ri-building-line"></i>Работа
+                    </h3>
+
+                    <div data-wow-duration="2s" class="qualification__info wow animate__animated animate__fadeInDown">
+
+                        <div>
+                            <h3 class="qualification__name">
+                                Developer
+                            </h3>
+                            <span class="qualification__country">freelance</span>
+                            <span class="qualification__year">2023 - 2024</span>
+                        </div>
+
+
+                        <div>
+                            <h3 class="qualification__name">
+                                Full-Stack Developer
+                            </h3>
+                            <span class="qualification__country">Upgrade Agency</span>
+                            <span class="qualification__year">2023 - Present</span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <img src="{% static 'images/shape-circle.svg' %}" alt="" class="qualification__img">
+        </section>
+
+        <!--==================== SERVICES ====================-->
+        <section class="services section" id="services">
+            <h2 class="section__title">Услуги</h2>
+            <span class="section__subtitle">Что я предлагаю</span>
+
+            <div class="services__container container grid section__border">
+
+                <div data-wow-delay="0.3s" class="services__card wow animate__animated animate__rotateInDownLeft">
+                    <i class="ri-code-line"></i>
+
+                    <h2 class="services__title">
+
+                        Разработка <br>
+                        Web-сайтов
+
+                    </h2>
+
+                    <p class="services__description">
+
+                        Создание и разработка веб сайтов любой сложности.
+                        Лендинги, интернет магазины, каталоги и т.д
+
+                    </p>
+
+                    <div class="services__border"></div>
+                </div>
+
+                <div data-wow-delay="0.5s" class="services__card wow animate__animated animate__flipInX">
+                    <i class="ri-layout-4-line"></i>
+
+                    <h2 class="services__title">
+
+                        Создание <br>
+                        приложений
+
+                    </h2>
+
+                    <p class="services__description">
+
+                        Разработка приложения любой сложности, под любые
+                        потребности и ваши задачи.
+
+                    </p>
+
+                    <div class="services__border "></div>
+                </div>
+
+                <div data-wow-delay="0.3s" class="services__card wow animate__animated animate__rotateInDownRight">
+                    <i class="ri-tools-line"></i>
+
+                    <h2 class="services__title">
+
+                        Системный <br>
+                        администратор
+
+                    </h2>
+
+                    <p class="services__description">
+
+                        Исправ-е проблем с ПК, ОС Windows, Linux.
+                        Проект-е и монтаж локальных сетей.
+                        Заправка картриджей.
+
+                    </p>
+
+                    <div class="services__border"></div>
+                </div>
+
+            </div>
+        </section>
+
+        <!--==================== Проекты ====================-->
+        <div data-wow-duration="2s" class="container wow animate__animated animate__headShake" id="projects">
+            <br><br><br>
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="testimonial-slider" class="owl-carousel">
+                        <!--  ////////////////////////////////////////////////////////  -->
+                        <div class="testimonial-item equal-height style-6">
+                            <div class="testimonial-image cell-left">
+                                <img src="images://blogger.googleusercontent.com/img/b/R28vZ2xl/AVvXsEjD7_2mqNjfUtcHH_rk-xkKxECZu7S4SpLiuk7cUhuDiK5Cl3IyiQdz2DhYPwlegxBbTdOfg57Eagf4QjCjPT3aLAlqu2eDMSMA-6uVk-9Xzx2QSVH7sf0y8SDEDbTFG2VR1q568BU7NdxzgoD_vOPcPRt5Sb-s_NfwgqnTvvc7LsKyvNyrZ56zcjwz/s16000/pexels-photo-265278.jpeg"
+                                   %}  alt="Rose">
+                            </div>
+                            <div class="cell-right">
+                                <div class="testimonial-name">Project 1
+                                </div>
+
+                            </div>
+                            <div class="testimonial-content quote"><i class="fa fa-quote-left">
+                                </i>This is a short bio about rose. This is a short bio about rose. This is a short bio
+                                about rose.
+                                <div> <button>Read more</button></div>
+                            </div>
+
+                        </div>
+                        <!--  ////////////////////////////////////////////////////////  -->
+                        <div class="testimonial-item equal-height style-6">
+                            <div class="testimonial-image cell-left">
+                                <img src="images://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhjGl4fuo1tZOynCGQ0iR2z3Gl8nCX_MDx95xxUrnV69GHl73SacIdD_dk4szzAGBDYA1QEm_BENDY4BHfR_brzCjyyUcrnnAVSr3vXRda880kAxV2uFPu_n_mxsBqVV-UA4XwvS3yU3QCMnNCaH4geII40oDOZgG4ZiEhDq_uccNlfbDCSWGew6aet/s16000/pexels-photo-1656663.jpeg"
+                                   %}  alt="Rose">
+                            </div>
+                            <div class="cell-right">
+                                <div class="testimonial-name">Rose2
+
+
+                                </div>
+                            </div>
+                            <div class="testimonial-content quote"><i class="fa fa-quote-center">
+
+                                </i>This is a short bio about rose. This is a short bio about rose. This is a short bio
+                                about rose.
+                                <div> <button>Read more</button></div>
+                            </div>
+
+                        </div>
+
+                        <!--  ////////////////////////////////////////////////////////  -->
+                        <div class="testimonial-item equal-height style-6">
+                            <div class="testimonial-image cell-left">
+                                <img src="images://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgtZSFlEYiLap656ENSGswRWWNgfh_hhgpztBHfWOJG3Z-Th2NzLiIMzdXtFW-ogkda2b6ukYmxVCskx11b4J7IbkXDS0qoeCEgFpOhrJOKy5kFDoB_nzpWDwnh41ecMNW8Jodb-V0dpSl3RLJA1iSXeIRp7-q6NpZiPt39w67Z9TxjmRdisRFoDxFU/s16000/pexels-photo-2280571.jpeg"
+                                   %}  alt="Rose">
+                            </div>
+                            <div class="cell-right">
+                                <div class="testimonial-name">Rose3
+                                </div>
+
+                            </div>
+                            <div class="testimonial-content quote"><i class="fa fa-quote-left">
+                                </i>This is a short bio about rose. This is a short bio about rose. This is a short bio
+                                about rose.
+                                <div> <button>Read more</button></div>
+                            </div>
+
+                        </div>
+                        <!--  ////////////////////////////////////////////////////////  -->
+                        <div class="testimonial-item equal-height style-6">
+                            <div class="testimonial-image cell-left">
+                                <img src="images://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgco71_2WjSLtdCLfQYey0vubgWNJE1Xjf4tkVM-UNKNfynVuu_XoQgonfWFtMzUyTi811xCAhcosc1cQNTY7_OxFIqfC7ntNQ_oKqlxtjc5TddqfTuz3zMVRSQkrYI0tBzWDu1YkfHND7IMO6c3Q2txZqAbmdDS0n5kB7zvVVIzDpbqbRTpSN6TgyE/s16000/pexels-photo-443547.jpeg"
+                                   %}  alt="Rose">
+                            </div>
+                            <div class="cell-right">
+                                <div class="testimonial-name">Rose4
+                                </div>
+
+                            </div>
+                            <div class="testimonial-content quote"><i class="fa fa-quote-left">
+                                </i>This is a short bio about rose. This is a short bio about rose. This is a short bio
+                                about rose.
+                                <div> <button>Read more</button></div>
+                            </div>
+
+                        </div>
+                        <!--  ////////////////////////////////////////////////////////  -->
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== TESTIMONIAL ====================
+            <section class="testimonial section">
+                
+            </section> -->
+
+        <!--==================== Контакты ====================-->
+        <section class="contact section" id="contact">
+            <h2 class="section__title">Контакты</h2>
+            <span class="section__subtitle">Cвязаться</span>
+
+            <div class="contact__container container grid section__border">
+
+                <div data-wow-duration="2s" class="contact__content wow animate__animated animate__bounceInLeft">
+                    <h3 class="contact__title">
+                        <i class="ri-chat-3-line"></i>Поговорите со мной
+                    </h3>
+
+                    <div class="contact__info">
+
+                        <div class="contact__data">
+                            <span class="contact__data-title">Email</span>
+                            <span class="contact__data-info">afzaloripov007@gmail.com</span>
+                        </div>
+
+                        <div class="contact__data">
+                            <span class="contact__data-title">Telegram</span>
+                            <span class="contact__data-info">+998330810282</span>
+                            <a href="https://t.me/A_Oripov09" target="_blank" class="contact__button">
+                                Напишите мне <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+
+                        <div class="contact__data">
+                            <span class="contact__data-title">Instagram</span>
+                            <span class="contact__data-info">@afzal_775</span>
+
+                            <a href="https://www.instagram.com/afzal_775/" target="_blank" class="contact__button">
+                                Напишите мне <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div data-wow-duration="2s" class="contact__content wow animate__animated animate__bounceInRight">
+                    <h3 class="contact__title">
+                        <i class="ri-send-plane-line"></i>Напишите мне сообщение
+                    </h3>
+
+                    <form method="post" class="contact__form" action="/">
+                        <input type="hidden" name="csrfmiddlewaretoken"
+                            value="A437GiYTklDnVjebhhC3Z1TNXtnB8k5ZsrAniRdsSKyW4JkvNldoB6dVmUK4E7V9">
+                        <div class="contact__form-div">
+                            <label class="contact__form-tag">Имя</label>
+                            <input type="text" name="name" placeholder="Ваше имя" class="contact__form-input"
+                                minlength="2" required id="id_name">
+                        </div>
+
+                        <div class="contact__form-div">
+                            <label class="contact__form-tag">Мобильный телефон</label>
+                            <input type="text" name="mobile" placeholder="Номер телефона" class="contact__form-input"
+                                maxlength="50" required id="id_mobile">
+                        </div>
+
+                        <div class="contact__form-div contact__form-area">
+                            <label class="contact__form-tag">Сообщение</label>
+                            <textarea name="message" cols="40" rows="10" placeholder="Напишите ваше сообщение"
+                                class="contact__form-input" minlength="10" required id="id_message"></textarea>
+                        </div>
+
+                        <!-- <p class="contact__message" id="contact-messages"></p> -->
+                        <!-- <input type="submit" value="Qale"/> -->
+                        <button type="submit" class="contact__button">Отправить <i class="ri-arrow-right-up-line"></i>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+        <div data-wow-duration="2s" class="footer__container container wow animate__animated animate__fadeInDown">
+            <h1 class="footer__title">Afzal</h1>
+            <p>Full-Stack Разработчик</p>
+
+            <ul class="footer__list">
+                <li>
+                    <a href="#home" class="footer__link">Домой</a>
+                </li>
+
+                <li>
+                    <a href="#skills" class="footer__link">Навыки</a>
+                </li>
+
+                <li>
+                    <a href="#projects" class="footer__link">Проекты</a>
+                </li>
+            </ul>
+
+            <ul class="footer__social">
+                <a href="https://t.me/A_Oripov09" target="_blank" class="footer__social-link">
+                    <i class="ri-telegram-line"></i>
+                </a>
+                <a href="https://github.com/Afzal-Oripov" target="_blank" class="footer__social-link">
+                    <i class="ri-github-line"></i>
+                </a>
+                <a href="https://www.instagram.com/afzal_775/" target="_blank" class="footer__social-link">
+                    <i class="ri-instagram-line"></i>
+                </a>
+            </ul>
+            <span class="footer__copy">
+                &#169; Afdev.uz 2024
+            </span>
+        </div>
+    </footer>
+
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-line"></i>
+    </a>
+    <!--=============== MAIN JS ===============-->
+    <script src="{% static "js/script.js" %}"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@latest/swiper-bundle.min.js"></script>
+
+    <!-- JavaScript -->
+    <script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/script.js"></script>
+    <!-- Swiper.js JavaScript -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!--========== SCROLL UP ==========-->
+
+    <!-- <script src="/jsi18n/"></script> -->
+    <!--=============== SCROLLREVEAL ===============-->
+    <!-- <script src="/static/assets/js/scrollreveal.min.js"></script>  -->
+
+    <!-- =============== Свайпер JS ===============-->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+
+</body>
+
+</html>
