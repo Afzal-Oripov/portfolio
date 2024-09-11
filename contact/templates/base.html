@@ -25,7 +25,7 @@
     <script src="{% static "js/wow.min.js" %}"></script>
     <script src="{% static "js/wow.min.js" %}"></script>
               <script>
-              new WOW().init();
+                new WOW().init();
               </script>
 
     <script type="text/javascript"
@@ -77,13 +77,12 @@
             <a href="#" class="nav__logo">
                 AF-Dev
             </a>
-            <p>{% trans 'Template title '%}</p>
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list grid">
 
                     <li class="nav__item">
                         <a href="#home" class="nav__link active-link">
-                            <i class="ri-home-5-line"></i>Домой
+                            <i class="ri-home-5-line"></i>{% trans 'Home' %}
                         </a>
                     </li>
 
@@ -166,6 +165,20 @@
                 <div class="nav__toggle" id="nav-toggle">
                     <i class="ri-menu-4-line"></i>
                 </div>
+                <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+                    <input name="next" type="hidden" value="{{ redirect_to }}">
+                    <select name="language">
+                        {% get_current_language as LANGUAGE_CODE %}
+                        {% get_available_languages as LANGUAGES %}
+                        {% get_language_info_list for LANGUAGES as languages %}
+                        {% for language in languages %}
+                            <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                                {{ language.name_local }} ({{ language.code }})
+                            </option>
+                        {% endfor %}
+                    </select>
+                    <input type="submit" value="Go">
+                </form>
             </div>
         </nav>
     </header>

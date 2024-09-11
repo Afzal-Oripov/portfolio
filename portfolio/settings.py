@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'modeltranslation',
+    
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -127,8 +128,8 @@ LANGUAGES = [
 MODELTRANSLATION_DEFAULT_LANGUAGE = "ru"
 MODELTRANSLATION_PREPOPULATE_LANGUAGE = 'en'
 
-LOCALE_PATH = [
-    BASE_DIR / 'locale', 
+LOCALE_PATHS = [
+    os.path.join(BASE_DIR, 'locale'),
 ]
 
 # Static files (CSS, JavaScript, Images)
