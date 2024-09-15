@@ -88,31 +88,31 @@
 
                     <li class="nav__item">
                         <a href="#skills" class="nav__link">
-                            <i class="ri-trophy-line"></i>Навыки
+                            <i class="ri-trophy-line"></i>{% trans "Skills" %}
                         </a>
                     </li>
 
                     <li class="nav__item">
                         <a href="#qualification" class="nav__link">
-                            <i class="ri-book-open-line"></i>Квалиф.
+                            <i class="ri-book-open-line"></i>{% trans "Qualification" %}
                         </a>
                     </li>
 
                     <li class="nav__item">
                         <a href="#services" class="nav__link">
-                            <i class="ri-briefcase-line"></i>Услуги
+                            <i class="ri-briefcase-line"></i>{% trans "Services" %}
                         </a>
                     </li>
 
                     <li class="nav__item">
                         <a href="#projects" class="nav__link">
-                            <i class="ri-image-line"></i>Проекты
+                            <i class="ri-image-line"></i>{% trans "Projects" %}
                         </a>
                     </li>
 
                     <li class="nav__item">
                         <a href="#contact" class="nav__link">
-                            <i class="ri-chat-3-line"></i>Контакты
+                            <i class="ri-chat-3-line"></i>{% trans "Contact " %}
                         </a>
                     </li>
 
@@ -165,20 +165,6 @@
                 <div class="nav__toggle" id="nav-toggle">
                     <i class="ri-menu-4-line"></i>
                 </div>
-                <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
-                    <input name="next" type="hidden" value="{{ redirect_to }}">
-                    <select name="language">
-                        {% get_current_language as LANGUAGE_CODE %}
-                        {% get_available_languages as LANGUAGES %}
-                        {% get_language_info_list for LANGUAGES as languages %}
-                        {% for language in languages %}
-                            <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
-                                {{ language.name_local }} ({{ language.code }})
-                            </option>
-                        {% endfor %}
-                    </select>
-                    <input type="submit" value="Go">
-                </form>
             </div>
         </nav>
     </header>
@@ -190,11 +176,9 @@
                 <div class="home__data grid">
                     <h1 class="home__title ">
 
-
-
-                        Привет, это Afzal<br>
-                        Full-Stack Разработчик<br>
-                        Из Ташкента<br>
+                        {% trans "Hello, this is Afzal" %}<br>
+                        {% trans "Full-Stack Developer" %}<br>
+                        {% trans "From Tashkent" %}
 
                     </h1>
 
@@ -230,21 +214,24 @@
 
                     <div>
                         <h3 class="home__info-title">
-                            О СЕБЕ
+                            {% trans "About Me" %}
                         </h3>
 
                         <p class="home__info-description">
 
-                            Привет, меня зовут Afzal. Я Full-Stack Разработчик.
-                            Я разрабатываю сайты, мобильные приложений.
-                            Также устраняю проблемы с ПК, Windows и Linux.
+                            {% blocktrans %}
+                                Hello, my name is Afzal. I am a Full-Stack Developer.
+                                I develop websites and mobile applications.
+                                I also troubleshoot PC, Windows and Linux problems.
+                            {% endblocktrans %}
+
 
                         </p>
                     </div>
 
                     <div>
                         <h3 class="home__info-title">
-                            КОНТАКТЫ
+                            {% trans "CONTACTS" %}
                         </h3>
 
                         <p class="home__info-description">
@@ -256,15 +243,15 @@
 
                     <div>
                         <h3 class="home__info-title">
-                            УСЛУГИ
+                            {% trans "Services" %}
                         </h3>
 
                         <p class="home__info-description">
 
-                            Разработка Web-сайтов <br>
-                            Создание приложений <br>
-                            Сис. администрирование <br>
-
+                            {% trans "Web Development" %}<br>
+                            {% trans "Application Development" %}<br>
+                            {% trans "System Administration" %}
+                            
                         </p>
                     </div>
 
@@ -275,7 +262,7 @@
                 <div data-wow-delay="1s" class="home__info wow animate__animated animate__backInUp">
                     <div>
                         <h3 class="home__info-title">
-                            ГОДЫ ОПЫТА
+                            {% trans "Years of Experience" %}
                         </h3>
 
                         <p class="home__info-number">
@@ -284,7 +271,7 @@
                     </div>
                     <div>
                         <h3 class="home__info-title">
-                            ЗАВЕРШЕННЫЕ ПРОЕКТЫ
+                            {% trans "Years of Experience" %}
                         </h3>
 
                         <p class="home__info-number">
@@ -293,7 +280,8 @@
                     </div>
                     <div>
                         <h3 class="home__info-title">
-                            РАБОТА В КОМПАНИЯХ
+                            {% trans "Work Experience" %}
+
                         </h3>
 
                         <p class="home__info-number">
@@ -308,8 +296,10 @@
 
         <!--==================== Мои скилы ====================-->
         <section class="skills section" id="skills">
-            <h2 class="section__title">Навыки</h2>
-            <span class="section__subtitle">Мои лучшие навыки</span>
+            <h2 class="section__title">{% trans "Skills" %}
+            </h2>
+            <span class="section__subtitle">{% trans "My Best Skills" %}
+            </span>
 
             <div class="skills__container container grid section__border">
                 <!--==================== Мои скилы 1 ====================-->
@@ -326,7 +316,7 @@
                             </div>
 
                             <h3 class="skills__name">HTML</h3>
-                            <span class="skills__subtitle">Профи</span>
+                            <span class="skills__subtitle">{% trans "Advanced" %}</span>
                         </div>
 
                         <div class="skills__data">
@@ -335,7 +325,7 @@
                             </div>
 
                             <h3 class="skills__name">CSS</h3>
-                            <span class="skills__subtitle">Профи</span>
+                            <span class="skills__subtitle">{% trans "Advanced" %}</span>
                         </div>
 
                         <div class="skills__data">
@@ -344,7 +334,7 @@
                             </div>
 
                             <h3 class="skills__name">JavaScript</h3>
-                            <span class="skills__subtitle">Средний</span>
+                            <span class="skills__subtitle">{% trans "Intermediate" %}</span>
                         </div>
 
                         <div class="skills__data">
@@ -353,7 +343,7 @@
                             </div>
 
                             <h3 class="skills__name">React</h3>
-                            <span class="skills__subtitle">Базовый</span>
+                            <span class="skills__subtitle">{% trans "Basic" %}</span>
                         </div>
 
                         <div class="skills__data">
@@ -362,7 +352,7 @@
                             </div>
 
                             <h3 class="skills__name">Git</h3>
-                            <span class="skills__subtitle">Средний</span>
+                            <span class="skills__subtitle">{% trans "Intermediate" %}</span>
                         </div>
 
                         <div class="skills__data">
@@ -371,7 +361,7 @@
                             </div>
 
                             <h3 class="skills__name">Django</h3>
-                            <span class="skills__subtitle">Средний</span>
+                            <span class="skills__subtitle">{% trans "Intermediate" %}</span>
                         </div>
 
                     </div>
@@ -381,62 +371,57 @@
                 <!--==================== Мои скилы 2 ====================-->
                 <div class="skills__content">
                     <h3 class="skills__title">
-                        <i class="ri-computer-line"></i> IT Engineer
+                        <i class="ri-computer-line"></i> {% trans "IT Engineer" %}
                     </h3>
-
-                    <div data-wow-delay="0.3s"data-wow-duration="2s" class="skills__info wow animate__animated animate__slideInRight">
+                
+                    <div data-wow-delay="0.3s" data-wow-duration="2s" class="skills__info wow animate__animated animate__slideInRight">
                         <div class="skills__data">
                             <div class="skills__blob">
                                 <img src="{% static 'images/monitor.svg' %}" alt="">
                             </div>
-
-                            <h3 class="skills__name">Computers</h3>
-                            <span class="skills__subtitle">Средний</span>
+                
+                            <h3 class="skills__name">{% trans "Computers" %}</h3>
+                            <span class="skills__subtitle">{% trans "Intermediate" %}</span>
                         </div>
-
-
-
+                
                         <div class="skills__data">
                             <div class="skills__blob">
                                 <img src="{% static 'images/windows.svg' %}" alt="">
                             </div>
-
-                            <h3 class="skills__name">Windows</h3>
-                            <span class="skills__subtitle">Профи</span>
+                
+                            <h3 class="skills__name">{% trans "Windows" %}</h3>
+                            <span class="skills__subtitle">{% trans "Professional" %}</span>
                         </div>
-
-
-
+                
                         <div class="skills__data">
                             <div class="skills__blob">
                                 <img src="{% static 'images/linux.svg' %}" alt="">
                             </div>
-
-                            <h3 class="skills__name">Linux</h3>
-                            <span class="skills__subtitle">Базовый</span>
+                
+                            <h3 class="skills__name">{% trans "Linux" %}</h3>
+                            <span class="skills__subtitle">{% trans "Basic" %}</span>
                         </div>
-
+                
                         <div class="skills__data">
                             <div class="skills__blob">
                                 <img src="{% static 'images/wifi.svg' %}" alt="">
                             </div>
-
-                            <h3 class="skills__name">Networks</h3>
-                            <span class="skills__subtitle">Средний</span>
+                
+                            <h3 class="skills__name">{% trans "Networks" %}</h3>
+                            <span class="skills__subtitle">{% trans "Intermediate" %}</span>
                         </div>
-
+                
                         <div class="skills__data">
                             <div class="skills__blob">
                                 <img src="{% static 'images/printer.svg' %}" alt="">
                             </div>
-
-                            <h3 class="skills__name">Printers</h3>
-                            <span class="skills__subtitle">Базовый</span>
+                
+                            <h3 class="skills__name">{% trans "Printers" %}</h3>
+                            <span class="skills__subtitle">{% trans "Basic" %}</span>
                         </div>
-
                     </div>
-
                 </div>
+                
             </div>
         </section>
 
@@ -592,8 +577,7 @@
                         <!--  ////////////////////////////////////////////////////////  -->
                         <div class="testimonial-item equal-height style-6">
                             <div class="testimonial-image cell-left">
-                                <img src="images://blogger.googleusercontent.com/img/b/R28vZ2xl/AVvXsEjD7_2mqNjfUtcHH_rk-xkKxECZu7S4SpLiuk7cUhuDiK5Cl3IyiQdz2DhYPwlegxBbTdOfg57Eagf4QjCjPT3aLAlqu2eDMSMA-6uVk-9Xzx2QSVH7sf0y8SDEDbTFG2VR1q568BU7NdxzgoD_vOPcPRt5Sb-s_NfwgqnTvvc7LsKyvNyrZ56zcjwz/s16000/pexels-photo-265278.jpeg"
-                                   %}  alt="Rose">
+                                <img src="images://blogger.googleusercontent.com/img/b/R28vZ2xl/AVvXsEjD7_2mqNjfUtcHH_rk-xkKxECZu7S4SpLiuk7cUhuDiK5Cl3IyiQdz2DhYPwlegxBbTdOfg57Eagf4QjCjPT3aLAlqu2eDMSMA-6uVk-9Xzx2QSVH7sf0y8SDEDbTFG2VR1q568BU7NdxzgoD_vOPcPRt5Sb-s_NfwgqnTvvc7LsKyvNyrZ56zcjwz/s16000/pexels-photo-265278.jpeg"   alt="Rose">
                             </div>
                             <div class="cell-right">
                                 <div class="testimonial-name">Project 1
@@ -611,7 +595,7 @@
                         <div class="testimonial-item equal-height style-6">
                             <div class="testimonial-image cell-left">
                                 <img src="images://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhjGl4fuo1tZOynCGQ0iR2z3Gl8nCX_MDx95xxUrnV69GHl73SacIdD_dk4szzAGBDYA1QEm_BENDY4BHfR_brzCjyyUcrnnAVSr3vXRda880kAxV2uFPu_n_mxsBqVV-UA4XwvS3yU3QCMnNCaH4geII40oDOZgG4ZiEhDq_uccNlfbDCSWGew6aet/s16000/pexels-photo-1656663.jpeg"
-                                   %}  alt="Rose">
+                                    alt="Rose">
                             </div>
                             <div class="cell-right">
                                 <div class="testimonial-name">Rose2
@@ -632,7 +616,7 @@
                         <div class="testimonial-item equal-height style-6">
                             <div class="testimonial-image cell-left">
                                 <img src="images://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgtZSFlEYiLap656ENSGswRWWNgfh_hhgpztBHfWOJG3Z-Th2NzLiIMzdXtFW-ogkda2b6ukYmxVCskx11b4J7IbkXDS0qoeCEgFpOhrJOKy5kFDoB_nzpWDwnh41ecMNW8Jodb-V0dpSl3RLJA1iSXeIRp7-q6NpZiPt39w67Z9TxjmRdisRFoDxFU/s16000/pexels-photo-2280571.jpeg"
-                                   %}  alt="Rose">
+                                     alt="Rose">
                             </div>
                             <div class="cell-right">
                                 <div class="testimonial-name">Rose3
@@ -650,7 +634,7 @@
                         <div class="testimonial-item equal-height style-6">
                             <div class="testimonial-image cell-left">
                                 <img src="images://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgco71_2WjSLtdCLfQYey0vubgWNJE1Xjf4tkVM-UNKNfynVuu_XoQgonfWFtMzUyTi811xCAhcosc1cQNTY7_OxFIqfC7ntNQ_oKqlxtjc5TddqfTuz3zMVRSQkrYI0tBzWDu1YkfHND7IMO6c3Q2txZqAbmdDS0n5kB7zvVVIzDpbqbRTpSN6TgyE/s16000/pexels-photo-443547.jpeg"
-                                   %}  alt="Rose">
+                                     alt="Rose">
                             </div>
                             <div class="cell-right">
                                 <div class="testimonial-name">Rose4

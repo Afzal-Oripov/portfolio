@@ -289,13 +289,13 @@ body.dark-theme {
 
 /*=============== HEADER & NAV ===============*/
 .header {
-  width: 90%;
+  width: 94%;
   margin: auto;
   position: fixed;
   display: flex;
   align-self: center;
   bottom: 2rem;
-  left:5rem;
+  left:6rem;
   z-index: var(--z-fixed);
 
 }
@@ -831,7 +831,7 @@ body.dark-theme {
 
 button {
   color: white;
-  background-color: rgb(58, 57, 113);
+  background-color: rgb(104, 104, 139);
   text-align: center;
   padding: 5px 10px; /* Используйте сокращенные единицы измерения */
   border-radius: 30px;
@@ -849,6 +849,9 @@ i.fa.fa-quote-left {
 @media screen and (max-width: 768px) {
   .owl-carousel .owl-item img {
     width: 50%; /* Пример изменения ширины для мобильных устройств */
+  }
+  button{
+    width: 30%;
   }
 }
 

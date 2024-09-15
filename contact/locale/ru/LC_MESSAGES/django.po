@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-11 15:40+0000\n"
+"POT-Creation-Date: 2024-09-15 13:54+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,5 +24,126 @@ msgstr ""
 msgid "Home"
 msgstr "Домой"
 
-#~ msgid "Template title"
-#~ msgstr "Домой"
+#: contact/templates/base.html:91 contact/templates/base.html:299
+msgid "Skills"
+msgstr "Навыки "
+
+#: contact/templates/base.html:97
+msgid "Qualification"
+msgstr "Квалиф."
+
+#: contact/templates/base.html:103 contact/templates/base.html:246
+msgid "Services"
+msgstr "Услуги "
+
+#: contact/templates/base.html:109
+msgid "Projects"
+msgstr "Проекты"
+
+#: contact/templates/base.html:115
+msgid "Contact "
+msgstr "Контакты"
+
+#: contact/templates/base.html:179
+msgid "Hello, this is Afzal"
+msgstr "Здравствуйте, это Афзал"
+
+#: contact/templates/base.html:180
+msgid "Full-Stack Developer"
+msgstr "Full-Stack разработчик"
+
+#: contact/templates/base.html:181
+msgid "From Tashkent"
+msgstr "Из Ташкента"
+
+#: contact/templates/base.html:217
+msgid "About Me"
+msgstr "О себе"
+
+#: contact/templates/base.html:222
+msgid ""
+"\n"
+"                                Hello, my name is Afzal. I am a Full-Stack "
+"Developer.\n"
+"                                I develop websites and mobile applications.\n"
+"                                I also troubleshoot PC, Windows and Linux "
+"problems.\n"
+"                            "
+msgstr ""
+"\n"
+"                                Здравствуйте, меня зовут Афзал. Я Full-Stack "
+"разработчик.\n"
+"                                Я разрабатываю веб-сайты и мобильные приложения.\n"
+"                                Также я решаю проблемы с ПК, Windows и Linux.\n"
+"                            "
+
+#: contact/templates/base.html:234
+msgid "CONTACTS"
+msgstr "КОНТАКТЫ"
+
+#: contact/templates/base.html:251
+msgid "Web Development"
+msgstr "Веб-разработка"
+
+#: contact/templates/base.html:252
+msgid "Application Development"
+msgstr "Разработка приложений"
+
+#: contact/templates/base.html:253
+msgid "System Administration"
+msgstr "Системное администрирование"
+
+#: contact/templates/base.html:265 contact/templates/base.html:274
+msgid "Years of Experience"
+msgstr "Годы опыта"
+
+#: contact/templates/base.html:283
+msgid "Work Experience"
+msgstr "Опыт работы"
+
+#: contact/templates/base.html:301
+msgid "My Best Skills"
+msgstr "Мои лучшие навыки"
+
+#: contact/templates/base.html:319 contact/templates/base.html:328
+msgid "Advanced"
+msgstr "Продвинутый"
+
+#: contact/templates/base.html:337 contact/templates/base.html:355
+#: contact/templates/base.html:364 contact/templates/base.html:384
+#: contact/templates/base.html:411
+msgid "Intermediate"
+msgstr "Средний"
+
+#: contact/templates/base.html:346 contact/templates/base.html:402
+#: contact/templates/base.html:420
+msgid "Basic"
+msgstr "Базовый"
+
+#: contact/templates/base.html:374
+msgid "IT Engineer"
+msgstr "IT-инженер"
+
+#: contact/templates/base.html:383
+msgid "Computers"
+msgstr "Компьютеры"
+
+#: contact/templates/base.html:392
+msgid "Windows"
+msgstr "Windows"
+
+#: contact/templates/base.html:393
+msgid "Professional"
+msgstr "Профи"
+
+#: contact/templates/base.html:401
+msgid "Linux"
+msgstr "Linux"
+
+#: contact/templates/base.html:410
+msgid "Networks"
+msgstr "Сети"
+
+#: contact/templates/base.html:419
+msgid "Printers"
+msgstr "Принтеры"
