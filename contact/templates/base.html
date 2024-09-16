@@ -390,7 +390,7 @@
                             </div>
                 
                             <h3 class="skills__name">{% trans "Windows" %}</h3>
-                            <span class="skills__subtitle">{% trans "Professional" %}</span>
+                            <span class="skills__subtitle">{% trans "Advanced" %}</span>
                         </div>
                 
                         <div class="skills__data">
@@ -427,34 +427,33 @@
 
         <!--==================== Квалификация ====================-->
         <section class="qualification section" id="qualification">
-            <h2 class="section__title">Квалификация</h2>
-            <span class="section__subtitle">Опыт и образование</span>
-
+            <h2 class="section__title">{% trans "Qualification" %}</h2>
+            <span class="section__subtitle">{% trans "Experience and Education" %}</span>
             <div class="qualification__container container grid section__border">
                 <!--==================== Квалификация 1 ====================-->
                 <div class="qualification__content">
                     <h3 class="qualification__title">
-                        <i class="ri-code-s-slash-fill"></i>Образование
+                        <i class="ri-code-s-slash-fill"></i>{% trans "Education" %}
                     </h3>
-
+                
                     <div data-wow-duration="2s" class="qualification__info wow animate__animated animate__fadeInDown">
-
+                
                         <div>
                             <h3 class="qualification__name">
                                 HTML & CSS
                             </h3>
                             <span class="qualification__country">Kings Academy</span>
-                            <span class="qualification__year">2021 - 2022</span>
+                            <span class="qualification__year">2021 - 2022 </span>
                         </div>
-
+                
                         <div>
                             <h3 class="qualification__name">
                                 Front-End
                             </h3>
                             <span class="qualification__country">IT Park</span>
-                            <span class="qualification__year">2022 - 2023</span>
+                            <span class="qualification__year">2022 - 2023 </span>
                         </div>
-
+                
                         <div>
                             <h3 class="qualification__name">
                                 Back-End
@@ -462,29 +461,30 @@
                             <span class="qualification__country">IT Park</span>
                             <span class="qualification__year">2023 - 2024</span>
                         </div>
-
+                
                     </div>
                 </div>
                 <!--==================== Квалификация 2 ====================-->
+                
+
                 <div class="qualification__content">
                     <h3 class="qualification__title">
-                        <i class="ri-building-line"></i>Работа
+                        <i class="ri-building-line"></i>{% trans "Work" %}
                     </h3>
 
                     <div data-wow-duration="2s" class="qualification__info wow animate__animated animate__fadeInDown">
 
                         <div>
                             <h3 class="qualification__name">
-                                Developer
+                                {% trans "Developer" %}
                             </h3>
-                            <span class="qualification__country">freelance</span>
+                            <span class="qualification__country">{% trans "freelance" %}</span>
                             <span class="qualification__year">2023 - 2024</span>
                         </div>
 
-
                         <div>
                             <h3 class="qualification__name">
-                                Full-Stack Developer
+                                {% trans "Full-Stack Developer" %}
                             </h3>
                             <span class="qualification__country">Upgrade Agency</span>
                             <span class="qualification__year">2023 - Present</span>
@@ -493,14 +493,16 @@
                     </div>
                 </div>
 
+
             </div>
             <img src="{% static 'images/shape-circle.svg' %}" alt="" class="qualification__img">
         </section>
 
         <!--==================== SERVICES ====================-->
+        
         <section class="services section" id="services">
-            <h2 class="section__title">Услуги</h2>
-            <span class="section__subtitle">Что я предлагаю</span>
+            <h2 class="section__title">{% trans "Services" %}</h2>
+            <span class="section__subtitle">{% trans "What I Offer" %}</span>
 
             <div class="services__container container grid section__border">
 
@@ -508,17 +510,11 @@
                     <i class="ri-code-line"></i>
 
                     <h2 class="services__title">
-
-                        Разработка <br>
-                        Web-сайтов
-
+                        {% trans "Web Development" %}
                     </h2>
 
                     <p class="services__description">
-
-                        Создание и разработка веб сайтов любой сложности.
-                        Лендинги, интернет магазины, каталоги и т.д
-
+                        {% trans "Creation and development of websites of any complexity. Landing pages, online stores, catalogs, etc." %}
                     </p>
 
                     <div class="services__border"></div>
@@ -528,38 +524,25 @@
                     <i class="ri-layout-4-line"></i>
 
                     <h2 class="services__title">
-
-                        Создание <br>
-                        приложений
-
+                        {% trans "App Development" %}
                     </h2>
 
                     <p class="services__description">
-
-                        Разработка приложения любой сложности, под любые
-                        потребности и ваши задачи.
-
+                        {% trans "Development of applications of any complexity, tailored to your needs and requirements." %}
                     </p>
 
-                    <div class="services__border "></div>
+                    <div class="services__border"></div>
                 </div>
 
                 <div data-wow-delay="0.3s" class="services__card wow animate__animated animate__rotateInDownRight">
                     <i class="ri-tools-line"></i>
 
                     <h2 class="services__title">
-
-                        Системный <br>
-                        администратор
-
+                        {% trans "System Administrator" %}
                     </h2>
 
                     <p class="services__description">
-
-                        Исправ-е проблем с ПК, ОС Windows, Linux.
-                        Проект-е и монтаж локальных сетей.
-                        Заправка картриджей.
-
+                        {% trans "Fixing issues with PCs, Windows OS, Linux. Designing and installing local networks. Cartridge refilling." %}
                     </p>
 
                     <div class="services__border"></div>
@@ -577,17 +560,17 @@
                         <!--  ////////////////////////////////////////////////////////  -->
                         <div class="testimonial-item equal-height style-6">
                             <div class="testimonial-image cell-left">
-                                <img src="images://blogger.googleusercontent.com/img/b/R28vZ2xl/AVvXsEjD7_2mqNjfUtcHH_rk-xkKxECZu7S4SpLiuk7cUhuDiK5Cl3IyiQdz2DhYPwlegxBbTdOfg57Eagf4QjCjPT3aLAlqu2eDMSMA-6uVk-9Xzx2QSVH7sf0y8SDEDbTFG2VR1q568BU7NdxzgoD_vOPcPRt5Sb-s_NfwgqnTvvc7LsKyvNyrZ56zcjwz/s16000/pexels-photo-265278.jpeg"   alt="Rose">
+                                <img src="#"   alt="image">
                             </div>
                             <div class="cell-right">
-                                <div class="testimonial-name">Project 1
+                                <div class="testimonial-name">QR Code Generator
                                 </div>
 
                             </div>
                             <div class="testimonial-content quote"><i class="fa fa-quote-left">
                                 </i>This is a short bio about rose. This is a short bio about rose. This is a short bio
                                 about rose.
-                                <div> <button>Read more</button></div>
+                                <div> <button> <a href="https://github.com/Afzal-Oripov/QR-Code-Generator">Read More</a> </button></div>
                             </div>
 
                         </div>
@@ -598,7 +581,7 @@
                                     alt="Rose">
                             </div>
                             <div class="cell-right">
-                                <div class="testimonial-name">Rose2
+                                <div class="testimonial-name">Search from all YouTube
 
 
                                 </div>
@@ -607,7 +590,7 @@
 
                                 </i>This is a short bio about rose. This is a short bio about rose. This is a short bio
                                 about rose.
-                                <div> <button>Read more</button></div>
+                                <div> <button><a href="https://github.com/Afzal-Oripov/YouTube-Search">Read More</a></button></div>
                             </div>
 
                         </div>
@@ -663,14 +646,14 @@
 
         <!--==================== Контакты ====================-->
         <section class="contact section" id="contact">
-            <h2 class="section__title">Контакты</h2>
-            <span class="section__subtitle">Cвязаться</span>
+            <h2 class="section__title">{% trans "Contacts" %}</h2>
+            <span class="section__subtitle">{% trans "Get in Touch" %}</span>
 
             <div class="contact__container container grid section__border">
 
                 <div data-wow-duration="2s" class="contact__content wow animate__animated animate__bounceInLeft">
                     <h3 class="contact__title">
-                        <i class="ri-chat-3-line"></i>Поговорите со мной
+                        <i class="ri-chat-3-line"></i>{% trans "Talk to Me" %}
                     </h3>
 
                     <div class="contact__info">
@@ -684,7 +667,7 @@
                             <span class="contact__data-title">Telegram</span>
                             <span class="contact__data-info">+998330810282</span>
                             <a href="https://t.me/A_Oripov09" target="_blank" class="contact__button">
-                                Напишите мне <i class="ri-arrow-right-line"></i>
+                                {% trans "Write to Me" %} <i class="ri-arrow-right-line"></i>
                             </a>
                         </div>
 
@@ -693,7 +676,7 @@
                             <span class="contact__data-info">@afzal_775</span>
 
                             <a href="https://www.instagram.com/afzal_775/" target="_blank" class="contact__button">
-                                Напишите мне <i class="ri-arrow-right-line"></i>
+                                {% trans "Write to Me" %} <i class="ri-arrow-right-line"></i>
                             </a>
                         </div>
 
@@ -702,33 +685,31 @@
 
                 <div data-wow-duration="2s" class="contact__content wow animate__animated animate__bounceInRight">
                     <h3 class="contact__title">
-                        <i class="ri-send-plane-line"></i>Напишите мне сообщение
+                        <i class="ri-send-plane-line"></i>{% trans "Send Me a Message" %}
                     </h3>
 
                     <form method="post" class="contact__form" action="/">
                         <input type="hidden" name="csrfmiddlewaretoken"
                             value="A437GiYTklDnVjebhhC3Z1TNXtnB8k5ZsrAniRdsSKyW4JkvNldoB6dVmUK4E7V9">
                         <div class="contact__form-div">
-                            <label class="contact__form-tag">Имя</label>
-                            <input type="text" name="name" placeholder="Ваше имя" class="contact__form-input"
-                                minlength="2" required id="id_name">
+                            <label class="contact__form-tag">{% trans "Name" %}</label>
+                            <input type="text" name="name" placeholder="{% trans 'Your Name' %}" class="contact__form-input" minlength="2" required id="id_name">
                         </div>
 
                         <div class="contact__form-div">
-                            <label class="contact__form-tag">Мобильный телефон</label>
-                            <input type="text" name="mobile" placeholder="Номер телефона" class="contact__form-input"
-                                maxlength="50" required id="id_mobile">
+                            <label class="contact__form-tag">{% trans "Mobile Phone" %}</label>
+                            <input type="text" name="mobile" placeholder="{% trans 'Phone Number' %}" class="contact__form-input" maxlength="50" required id="id_mobile">
                         </div>
 
                         <div class="contact__form-div contact__form-area">
-                            <label class="contact__form-tag">Сообщение</label>
-                            <textarea name="message" cols="40" rows="10" placeholder="Напишите ваше сообщение"
-                                class="contact__form-input" minlength="10" required id="id_message"></textarea>
+                            <label class="contact__form-tag">{% trans "Message" %}</label>
+                            <textarea name="message" cols="40" rows="10" placeholder="{% trans 'Write your message' %}" class="contact__form-input" minlength="10" required id="id_message"></textarea>
                         </div>
 
                         <!-- <p class="contact__message" id="contact-messages"></p> -->
                         <!-- <input type="submit" value="Qale"/> -->
-                        <button type="submit" class="contact__button">Отправить <i class="ri-arrow-right-up-line"></i>
+                        <button type="submit" class="contact__button">
+                            {% trans "Send" %} <i class="ri-arrow-right-up-line"></i>
                         </button>
                     </form>
                 </div>
@@ -741,19 +722,19 @@
     <footer class="footer">
         <div data-wow-duration="2s" class="footer__container container wow animate__animated animate__fadeInDown">
             <h1 class="footer__title">Afzal</h1>
-            <p>Full-Stack Разработчик</p>
+            <p>{% trans "Full-Stack Developer" %}</p>
 
             <ul class="footer__list">
                 <li>
-                    <a href="#home" class="footer__link">Домой</a>
+                    <a href="#home" class="footer__link">{% trans "Home" %}</a>
                 </li>
-
+            
                 <li>
-                    <a href="#skills" class="footer__link">Навыки</a>
+                    <a href="#skills" class="footer__link">{% trans "Skills" %}</a>
                 </li>
-
+            
                 <li>
-                    <a href="#projects" class="footer__link">Проекты</a>
+                    <a href="#projects" class="footer__link">{% trans "Projects" %}</a>
                 </li>
             </ul>
 

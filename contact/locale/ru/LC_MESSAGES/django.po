@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 13:54+0000\n"
+"POT-Creation-Date: 2024-09-16 15:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,23 +20,25 @@ msgstr ""
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: contact/templates/base.html:85
+#: contact/templates/base.html:85 contact/templates/base.html:729
 msgid "Home"
 msgstr "Домой"
 
 #: contact/templates/base.html:91 contact/templates/base.html:299
+#: contact/templates/base.html:733
 msgid "Skills"
 msgstr "Навыки "
 
-#: contact/templates/base.html:97
+#: contact/templates/base.html:97 contact/templates/base.html:430
 msgid "Qualification"
 msgstr "Квалиф."
 
 #: contact/templates/base.html:103 contact/templates/base.html:246
+#: contact/templates/base.html:504
 msgid "Services"
 msgstr "Услуги "
 
-#: contact/templates/base.html:109
+#: contact/templates/base.html:109 contact/templates/base.html:737
 msgid "Projects"
 msgstr "Проекты"
 
@@ -48,7 +50,8 @@ msgstr "Контакты"
 msgid "Hello, this is Afzal"
 msgstr "Здравствуйте, это Афзал"
 
-#: contact/templates/base.html:180
+#: contact/templates/base.html:180 contact/templates/base.html:487
+#: contact/templates/base.html:725
 msgid "Full-Stack Developer"
 msgstr "Full-Stack разработчик"
 
@@ -73,15 +76,17 @@ msgstr ""
 "\n"
 "                                Здравствуйте, меня зовут Афзал. Я Full-Stack "
 "разработчик.\n"
-"                                Я разрабатываю веб-сайты и мобильные приложения.\n"
-"                                Также я решаю проблемы с ПК, Windows и Linux.\n"
+"                                Я разрабатываю веб-сайты и мобильные "
+"приложения.\n"
+"                                Также я решаю проблемы с ПК, Windows и "
+"Linux.\n"
 "                            "
 
 #: contact/templates/base.html:234
 msgid "CONTACTS"
 msgstr "КОНТАКТЫ"
 
-#: contact/templates/base.html:251
+#: contact/templates/base.html:251 contact/templates/base.html:513
 msgid "Web Development"
 msgstr "Веб-разработка"
 
@@ -106,6 +111,7 @@ msgid "My Best Skills"
 msgstr "Мои лучшие навыки"
 
 #: contact/templates/base.html:319 contact/templates/base.html:328
+#: contact/templates/base.html:393
 msgid "Advanced"
 msgstr "Продвинутый"
 
@@ -132,10 +138,6 @@ msgstr "Компьютеры"
 msgid "Windows"
 msgstr "Windows"
 
-#: contact/templates/base.html:393
-msgid "Professional"
-msgstr "Профи"
-
 #: contact/templates/base.html:401
 msgid "Linux"
 msgstr "Linux"
@@ -147,3 +149,112 @@ msgstr "Сети"
 #: contact/templates/base.html:419
 msgid "Printers"
 msgstr "Принтеры"
+
+#: contact/templates/base.html:431
+msgid "Experience and Education"
+msgstr "Опыт и образование"
+
+#: contact/templates/base.html:436
+msgid "Education"
+msgstr "Образование"
+
+#: contact/templates/base.html:472
+msgid "Work"
+msgstr "Работа"
+
+#: contact/templates/base.html:479
+#, fuzzy
+#| msgid "Web Development"
+msgid "Developer"
+msgstr "Разработчик"
+
+#: contact/templates/base.html:481
+msgid "freelance"
+msgstr "Фриланс"
+
+#: contact/templates/base.html:505
+msgid "What I Offer"
+msgstr "Что я предлагаю"
+
+#: contact/templates/base.html:517
+msgid ""
+"Creation and development of websites of any complexity. Landing pages, "
+"online stores, catalogs, etc."
+msgstr ""
+"Создание и разработка веб-сайтов любой сложности. Лендинги, интернет-"
+"магазины, каталоги и т.д."
+
+#: contact/templates/base.html:527
+msgid "App Development"
+msgstr "Разработка приложений"
+
+#: contact/templates/base.html:531
+msgid ""
+"Development of applications of any complexity, tailored to your needs and "
+"requirements."
+msgstr "Разработка приложений любой сложности, под любые потребности и задачи."
+
+#: contact/templates/base.html:541
+msgid "System Administrator"
+msgstr "Системный администратор"
+
+#: contact/templates/base.html:545
+msgid ""
+"Fixing issues with PCs, Windows OS, Linux. Designing and installing local "
+"networks. Cartridge refilling."
+msgstr ""
+"Исправление проблем с ПК, ОС Windows, Linux. Проектирование и монтаж "
+"локальных сетей. Заправка картриджей."
+
+#: contact/templates/base.html:649
+
+msgid "Contacts"
+msgstr "Контакты"
+
+#: contact/templates/base.html:650
+msgid "Get in Touch"
+msgstr "Связаться"
+
+#: contact/templates/base.html:656
+msgid "Talk to Me"
+msgstr "Поговорите со мной"
+
+#: contact/templates/base.html:670 contact/templates/base.html:679
+msgid "Write to Me"
+msgstr "Напишите мне"
+
+#: contact/templates/base.html:688
+msgid "Send Me a Message"
+msgstr "Отправьте мне сообщение"
+
+#: contact/templates/base.html:695
+msgid "Name"
+msgstr "Имя"
+
+#: contact/templates/base.html:696
+msgid "Your Name"
+msgstr "Имя"
+
+#: contact/templates/base.html:700
+msgid "Mobile Phone"
+msgstr "Мобильный телефон"
+
+#: contact/templates/base.html:701
+msgid "Phone Number"
+msgstr "Номер телефона"
+
+#: contact/templates/base.html:705
+msgid "Message"
+msgstr "Сообщение"
+
+#: contact/templates/base.html:706
+
+msgid "Write your message"
+msgstr "Напишите мне"
+
+#: contact/templates/base.html:712
+msgid "Send"
+msgstr "Отправить"
+
+#~ msgid "Professional"
+#~ msgstr "Профи"
