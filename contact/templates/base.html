@@ -709,6 +709,8 @@
                         <!-- <p class="contact__message" id="contact-messages"></p> -->
                         <!-- <input type="submit" value="Qale"/> -->
                         <button type="submit" class="contact__button">
+                            {% csrf_token %}
+                            {{ form.as_p }}
                             {% trans "Send" %} <i class="ri-arrow-right-up-line"></i>
                         </button>
                     </form>

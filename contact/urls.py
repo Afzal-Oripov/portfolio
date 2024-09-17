@@ -6,5 +6,4 @@ app_name = 'contact'
 
 urlpatterns = [
     path('', views.home, name='contact_view'),
-    # Добавьте другие URL-паттерны для контактов здесь
 ]
