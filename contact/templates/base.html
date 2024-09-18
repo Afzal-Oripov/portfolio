@@ -683,38 +683,31 @@
                     </div>
                 </div>
 
-                <div data-wow-duration="2s" class="contact__content wow animate__animated animate__bounceInRight">
-                    <h3 class="contact__title">
-                        <i class="ri-send-plane-line"></i>{% trans "Send Me a Message" %}
-                    </h3>
-
-                    <form method="post" class="contact__form" action="/">
-                        <input type="hidden" name="csrfmiddlewaretoken"
-                            value="A437GiYTklDnVjebhhC3Z1TNXtnB8k5ZsrAniRdsSKyW4JkvNldoB6dVmUK4E7V9">
-                        <div class="contact__form-div">
-                            <label class="contact__form-tag">{% trans "Name" %}</label>
-                            <input type="text" name="name" placeholder="{% trans 'Your Name' %}" class="contact__form-input" minlength="2" required id="id_name">
-                        </div>
-
-                        <div class="contact__form-div">
-                            <label class="contact__form-tag">{% trans "Mobile Phone" %}</label>
-                            <input type="text" name="mobile" placeholder="{% trans 'Phone Number' %}" class="contact__form-input" maxlength="50" required id="id_mobile">
-                        </div>
-
-                        <div class="contact__form-div contact__form-area">
-                            <label class="contact__form-tag">{% trans "Message" %}</label>
-                            <textarea name="message" cols="40" rows="10" placeholder="{% trans 'Write your message' %}" class="contact__form-input" minlength="10" required id="id_message"></textarea>
-                        </div>
-
-                        <!-- <p class="contact__message" id="contact-messages"></p> -->
-                        <!-- <input type="submit" value="Qale"/> -->
-                        <button type="submit" class="contact__button">
-                            {% csrf_token %}
-                            {{ form.as_p }}
-                            {% trans "Send" %} <i class="ri-arrow-right-up-line"></i>
-                        </button>
-                    </form>
-                </div>
+                <form method="post" id="form" class="contact__form contact__content wow animate__animated animate__bounceInRight" action="/">
+                    {% csrf_token %}
+                    <div class="contact__form-div">
+                        <label class="contact__form-tag">{% trans "Name" %}</label>
+                        <input type="text" name="name"  id= "name" placeholder="{% trans 'Your Name' %}" class="contact__form-input" minlength="2" required id="id_name">
+                    </div>
+                
+                    <div class="contact__form-div">
+                        <label class="contact__form-tag">{% trans "Mobile Phone" %}</label>
+                        <input type="text" name="phone" id="phone" placeholder="{% trans 'Phone Number' %}" class="contact__form-input" maxlength="50" required id="id_mobile">
+                    </div>
+                
+                    <div class="contact__form-div contact__form-area">
+                        <label class="contact__form-tag">{% trans "Message" %}</label>
+                        <textarea name="message" cols="40" rows="10" placeholder="{% trans 'Write your message' %}" class="contact__form-input" minlength="10" required id="id_message"></textarea>
+                    </div>
+                
+                    <button type="submit" class="contact__button">
+                        {% trans "Send" %} <i class="ri-arrow-right-up-line"></i>
+                    </button>
+                
+                    <p class="succes disp">Your message sent!</p>
+                    <br>
+                </form>
+                
 
             </div>
         </section>
@@ -762,7 +755,6 @@
     </a>
     <!--=============== MAIN JS ===============-->
     <script src="{% static "js/script.js" %}"></script>
-
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@latest/swiper-bundle.min.js"></script>
 
@@ -770,16 +762,18 @@
     <script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/script.js"></script>
     <!-- Swiper.js JavaScript -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
+    
     <!--========== SCROLL UP ==========-->
-
+    
     <!-- <script src="/jsi18n/"></script> -->
     <!--=============== SCROLLREVEAL ===============-->
     <!-- <script src="/static/assets/js/scrollreveal.min.js"></script>  -->
-
+    
     <!-- =============== Свайпер JS ===============-->
     <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
-
+    
 </body>
+<script src="{% static "js/order.js"%}"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 </html>

@@ -846,6 +846,17 @@ i.fa.fa-quote-left {
   color: #999;
 }
 
+.succes{
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.disp{
+  display: none;
+}
+
 @media screen and (max-width: 768px) {
   .owl-carousel .owl-item img {
     width: 50%; /* Пример изменения ширины для мобильных устройств */
