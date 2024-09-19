@@ -683,22 +683,9 @@
                     </div>
                 </div>
 
-                <form method="post" id="form" class="contact__form contact__content wow animate__animated animate__bounceInRight" action="/">
+                <form method="post" id="form" class="contact__form contact__content wow animate__animated animate__bounceInRight" >
                     {% csrf_token %}
-                    <div class="contact__form-div">
-                        <label class="contact__form-tag">{% trans "Name" %}</label>
-                        <input type="text" name="name"  id= "name" placeholder="{% trans 'Your Name' %}" class="contact__form-input" minlength="2" required id="id_name">
-                    </div>
-                
-                    <div class="contact__form-div">
-                        <label class="contact__form-tag">{% trans "Mobile Phone" %}</label>
-                        <input type="text" name="phone" id="phone" placeholder="{% trans 'Phone Number' %}" class="contact__form-input" maxlength="50" required id="id_mobile">
-                    </div>
-                
-                    <div class="contact__form-div contact__form-area">
-                        <label class="contact__form-tag">{% trans "Message" %}</label>
-                        <textarea name="message" cols="40" rows="10" placeholder="{% trans 'Write your message' %}" class="contact__form-input" minlength="10" required id="id_message"></textarea>
-                    </div>
+                    {{ form.as_p }}
                 
                     <button type="submit" class="contact__button">
                         {% trans "Send" %} <i class="ri-arrow-right-up-line"></i>
@@ -773,7 +760,7 @@
     <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
     
 </body>
-<script src="{% static "js/order.js"%}"></script>
+{% comment %} <script src="{% static "js/order.js"%}"></script> {% endcomment %}
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 </html>
