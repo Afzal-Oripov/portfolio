@@ -5,6 +5,7 @@ import telebot
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'portfolio.settings')  # Replace with your actual project name
 django.setup()
 
+
 bot = telebot.TeleBot('7176087052:AAEEuwoJd6SBYJBJT3dGkS3ZbUPqGYOIy_c')
 admins = [1495634955]
 
@@ -28,5 +29,5 @@ def start(message):
         bot.send_message(message.chat.id, 'Hello, my dear Afzal!')
     except Exception as e:
         print(f"Error sending start message: {e}")
-
-bot.infinity_polling()
+        
+bot.polling()

@@ -10,7 +10,10 @@
         content="Создание сайтов и мобильных приложений. Решение проблем c компьютерами, операционными системами Windows и Linux, а также заправка картриджей" />
 
     <!--=============== FAVICON ===============-->
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicons/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicons/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicons/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'favicons/site.webmanifest' %}">
     <!--=============== REMIXICONS ===============-->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
@@ -560,7 +563,7 @@
                         <!--  ////////////////////////////////////////////////////////  -->
                         <div class="testimonial-item equal-height style-6">
                             <div class="testimonial-image cell-left">
-                                <img src="#"   alt="image">
+                                <img src="{% static 'images/qrcode.png' %}"   alt="image">
                             </div>
                             <div class="cell-right">
                                 <div class="testimonial-name">QR Code Generator
@@ -568,8 +571,7 @@
 
                             </div>
                             <div class="testimonial-content quote"><i class="fa fa-quote-left">
-                                </i>This is a short bio about rose. This is a short bio about rose. This is a short bio
-                                about rose.
+                                </i>All my projects you can find in my GitHub!
                                 <div> <button> <a href="https://github.com/Afzal-Oripov/QR-Code-Generator">Read More</a> </button></div>
                             </div>
 
@@ -577,8 +579,7 @@
                         <!--  ////////////////////////////////////////////////////////  -->
                         <div class="testimonial-item equal-height style-6">
                             <div class="testimonial-image cell-left">
-                                <img src="images://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhjGl4fuo1tZOynCGQ0iR2z3Gl8nCX_MDx95xxUrnV69GHl73SacIdD_dk4szzAGBDYA1QEm_BENDY4BHfR_brzCjyyUcrnnAVSr3vXRda880kAxV2uFPu_n_mxsBqVV-UA4XwvS3yU3QCMnNCaH4geII40oDOZgG4ZiEhDq_uccNlfbDCSWGew6aet/s16000/pexels-photo-1656663.jpeg"
-                                    alt="Rose">
+                                <img src="{% static 'images/youtube.png' %}" alt="YouTbe-Search">
                             </div>
                             <div class="cell-right">
                                 <div class="testimonial-name">Search from all YouTube
@@ -588,8 +589,7 @@
                             </div>
                             <div class="testimonial-content quote"><i class="fa fa-quote-center">
 
-                                </i>This is a short bio about rose. This is a short bio about rose. This is a short bio
-                                about rose.
+                                </i>All my projects you can find in my GitHub!
                                 <div> <button><a href="https://github.com/Afzal-Oripov/YouTube-Search">Read More</a></button></div>
                             </div>
 
@@ -598,17 +598,16 @@
                         <!--  ////////////////////////////////////////////////////////  -->
                         <div class="testimonial-item equal-height style-6">
                             <div class="testimonial-image cell-left">
-                                <img src="images://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgtZSFlEYiLap656ENSGswRWWNgfh_hhgpztBHfWOJG3Z-Th2NzLiIMzdXtFW-ogkda2b6ukYmxVCskx11b4J7IbkXDS0qoeCEgFpOhrJOKy5kFDoB_nzpWDwnh41ecMNW8Jodb-V0dpSl3RLJA1iSXeIRp7-q6NpZiPt39w67Z9TxjmRdisRFoDxFU/s16000/pexels-photo-2280571.jpeg"
+                                <img src="{% static "images/Chatapp.png" %}"
                                      alt="Rose">
                             </div>
                             <div class="cell-right">
-                                <div class="testimonial-name">Rose3
+                                <div class="testimonial-name">Online Chat
                                 </div>
 
                             </div>
                             <div class="testimonial-content quote"><i class="fa fa-quote-left">
-                                </i>This is a short bio about rose. This is a short bio about rose. This is a short bio
-                                about rose.
+                                </i>All my projects you can find in my GitHub!
                                 <div> <button>Read more</button></div>
                             </div>
 
@@ -616,17 +615,16 @@
                         <!--  ////////////////////////////////////////////////////////  -->
                         <div class="testimonial-item equal-height style-6">
                             <div class="testimonial-image cell-left">
-                                <img src="images://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgco71_2WjSLtdCLfQYey0vubgWNJE1Xjf4tkVM-UNKNfynVuu_XoQgonfWFtMzUyTi811xCAhcosc1cQNTY7_OxFIqfC7ntNQ_oKqlxtjc5TddqfTuz3zMVRSQkrYI0tBzWDu1YkfHND7IMO6c3Q2txZqAbmdDS0n5kB7zvVVIzDpbqbRTpSN6TgyE/s16000/pexels-photo-443547.jpeg"
+                                <img src="{% static "images/bookmarks.png" %}"
                                      alt="Rose">
                             </div>
                             <div class="cell-right">
-                                <div class="testimonial-name">Rose4
+                                <div class="testimonial-name">BookMarks
                                 </div>
 
                             </div>
                             <div class="testimonial-content quote"><i class="fa fa-quote-left">
-                                </i>This is a short bio about rose. This is a short bio about rose. This is a short bio
-                                about rose.
+                                </i>All my projects you can find in my GitHub!
                                 <div> <button>Read more</button></div>
                             </div>
 
@@ -683,17 +681,37 @@
                     </div>
                 </div>
 
-                <form method="post" id="form" class="contact__form contact__content wow animate__animated animate__bounceInRight" >
+                <form method="post" id="form" class="contact__form contact__content wow animate__animated animate__bounceInRight">
                     {% csrf_token %}
                     {{ form.as_p }}
                 
-                    <button type="submit" class="contact__button">
+                    <button type="submit" class="contact__button" {% if message_count >= 3 %}disabled{% endif %}>
                         {% trans "Send" %} <i class="ri-arrow-right-up-line"></i>
                     </button>
                 
+                    {% if messages %}
+                        <ul class="messages">
+                            {% for message in messages %}
+                                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+                                    {{ message }}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                
                     <p class="succes disp">Your message sent!</p>
                     <br>
+                    <script>
+                        // Функция для скрытия сообщений через 12 секунд0 
+                        setTimeout(function() {
+                            const messages = document.querySelector('.messages');
+                            if (messages) {
+                                messages.style.display = 'none'; // Скрыть блок с сообщениями
+                            }
+                        }, 12000); // 12000 миллисекунд = 12 секунд
+                    </script>
                 </form>
+                
                 
 
             </div>

@@ -26,12 +26,15 @@ SECRET_KEY = 'django-insecure---lryhu0b!mogbd95+ck@hqria=1iw&l3b_iv7!vyj4xny)q*&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
-
-CSRF_TRUSTED_ORIGINS = [
-    'https://accc-84-54-83-43.ngrok-free.app',
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    '6f76-213-230-82-32.ngrok-free.app',  # добавьте ваш ngrok URL
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://6f76-213-230-82-32.ngrok-free.app',
+]
 
 
 # Application definition
@@ -148,3 +151,27 @@ STATIC_ROOT = BASE_DIR / 'static'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': 'django_debug.log',  # Файл для хранения логов
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+        'contact': {  # Замените на имя вашего приложения
+            'handlers': ['file'],
+            'level': 'DEBUG',
+            'propagate': False,
+        },
+    },
+}

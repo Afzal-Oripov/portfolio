@@ -132,7 +132,7 @@ body.dark-theme {
 .dark-theme .nav__menu,
 .dark-theme .language__menu,
 .dark-theme .scrollup{
-  background-color: hsl(210, 4%, 11%);
+  background-color: var(--container-color);
   box-shadow: 0 4px 20px hsla(235, 75%, 27%, 0.692);
 }
 
@@ -305,6 +305,7 @@ body.dark-theme {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: var(--body-color);
   box-shadow: 0 4px 20px hsla(207, 24%, 35%, .1);
   padding-inline: 1.5rem;
   border-radius: 9rem;
@@ -402,7 +403,7 @@ body.dark-theme {
     right: 0;
     bottom: -60%;
     margin: 0 auto;
-    background-color:hsl(0, 0%, 89%);
+    background-color:var(--body-color);
     box-shadow: 0 4px 20px hsla(207, 24%, 35%, .1);
     padding: 2rem 1.5rem 5rem;
     border-radius: 2rem;
@@ -786,7 +787,7 @@ body.dark-theme {
 }
 
 .owl-carousel .owl-item img {
-  width: 20%;
+  width: 35%;
   border: 1px solid #fff;
   border-radius: 20px;
   margin: 10px;
@@ -857,9 +858,16 @@ i.fa.fa-quote-left {
   display: none;
 }
 
+.custom-input-class {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%; /* Настройте по необходимости */
+}
+
 @media screen and (max-width: 768px) {
   .owl-carousel .owl-item img {
-    width: 50%; /* Пример изменения ширины для мобильных устройств */
+    width: 40%; /* Пример изменения ширины для мобильных устройств */
   }
   button{
     width: 30%;
@@ -886,7 +894,7 @@ i.fa.fa-quote-left {
   font-weight: var(--font-semi-bold);
   margin-bottom: 2.5rem;
 }
-contact__title i{
+.contact__title i{
   font-size: 1rem;
   font-weight: initial;
 }
@@ -1119,6 +1127,7 @@ contact__title i{
 
   .nav__menu{
     padding-bottom: 4rem;
+    background-color: var();
   }
   .nav__list{
     gap: 1rem 1.25rem;
@@ -1169,6 +1178,7 @@ contact__title i{
 
   .nav{
     margin: 0 auto;
+
   }
   
   .skills__container{
@@ -1270,7 +1280,7 @@ contact__title i{
     column-gap: 3rem;
     margin-inline: 1.5rem;
     padding: 0;
-    background: var(--body-color);
+
   }
 
   .nav__link i,
